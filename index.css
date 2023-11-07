@@ -1,0 +1,305 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      background-color: #f4f4f4;
+  }
+
+  .container {
+      background-color: #fff;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+  }
+
+  .navbar {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 5px 0px;
+  }
+
+  .hamburger {
+      display: none;
+      width: 35px;
+      height: 30px;
+      margin: 10px 10px;
+      position: relative;
+      cursor: pointer;
+  }
+
+  .menu {
+      background-color: rgb(69, 65, 65);
+      position: absolute;
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      transition-duration: 500ms;
+  }
+
+  .first {
+      top: 0px;
+      left: 0px;
+  }
+
+  .second {
+      top: 13px;
+      left: 0px;
+      opacity: 1;
+  }
+
+  .third {
+      bottom: 0px;
+      left: 0px;
+  }
+
+  .hamburger.open .first {
+      transform: rotate(45deg);
+      top: 13px;
+  }
+
+  .hamburger.open .second {
+      opacity: 0;
+  }
+
+  .hamburger.open .third {
+      transform: rotate(-45deg);
+      top: 13px;
+  }
+
+  .routes_containers {
+      display: flex;
+  }
+
+  .routes {
+      padding: 10px;
+      font-size: 20px;
+      letter-spacing: 2px;
+      list-style-type: none;
+  }
+
+  .routes a {
+      text-decoration: none;
+      color: rgb(101, 96, 96);
+      font-size: larger;
+      font-weight: bold;
+      padding: 10px;
+      cursor: pointer;
+  }
+
+  .routes a:hover {
+      color: #f11000;
+  }
+
+  .icons {
+      font-weight: bolder;
+      font-size: 25px;
+      display: flex;
+      gap: 15px;
+      position: absolute;
+      right: 0;
+      margin-right: 3vw;
+  }
+
+  .icons i {
+      color: black;
+  }
+
+  .icons i:hover {
+      color: #f11000;
+  }
+
+
+  .middle_container {
+      height: 100vh;
+      background-image: url("./assets/img1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  .middle_main_container {
+      position: absolute;
+      width: 80%;
+      max-width: 580px;
+      margin: 18% 5%;
+      background-color: rgba(243, 118, 109, 0.7);
+      padding: 40px 20px;
+      box-sizing: border-box;
+  }
+
+  .middle_heading {
+      opacity: 1;
+      color: white;
+  }
+
+  .middle_heading>h1 {
+      font-size: 50px;
+      font-family: sans-serif;
+      letter-spacing: 2px;
+      font-weight: bold;
+  }
+
+  .middle_heading>p {
+      width: 100%;
+      margin-top: 20px;
+      color: white;
+      text-align: left;
+      font-size: larger;
+      letter-spacing: 2px;
+  }
+
+  .bottom_container {
+      background-image: linear-gradient(to right,
+              #fd66ca,
+              #ff709e,
+              #ff9076,
+              #ffb65b,
+              #ffdc5b);
+      padding-bottom: 12vh;
+  }
+
+  .bottom_main_container {
+      padding-top: 100px;
+  }
+
+  .bottom_main_container>h1 {
+      margin-bottom: 70px;
+      font-family: sans-serif;
+      text-align: center;
+      font-size: 55px;
+      color: white;
+      letter-spacing: 3px;
+  }
+
+  .cards_container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 85%;
+      margin: auto;
+      gap: 130px;
+  }
+
+  .cards_container>div {
+      height: 510px;
+      border-top-right-radius: 100px;
+      border-bottom-left-radius: 100px;
+  }
+
+  .cards {
+      background-color: white;
+  }
+
+  .cards_img_container {
+      height: 330px;
+      margin: auto;
+      margin-top: 30px;
+      width: 85%;
+      border-top-right-radius: 100px;
+  }
+
+  .cards_img {
+      width: 100%;
+      height: 100%;
+      border-top-right-radius: 100px;
+  }
+
+  .cards>h2 {
+      margin-top: 20px;
+      font-family: sans-serif;
+      margin-bottom: 20px;
+  }
+
+  .cards,
+  h2,
+  p {
+      text-align: center;
+      color: black;
+  }
+
+  .cards>p {
+      width: 85%;
+      margin: auto;
+      font-family: sans-serif;
+  }
+
+  button {
+      cursor: pointer;
+      padding: 20px 60px 20px 60px;
+      font-size: 25px;
+      margin: auto;
+      margin-top: 70px;
+      display: block;
+      background-color: rgba(236, 205, 196, 0.7);
+      border: none;
+      color: black;
+      border-radius: 100px;
+      font-weight: 700;
+  }
+
+  button:hover {
+      color: white;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+      .navbar {
+          justify-content: space-between;
+          padding-left: 10px;
+      }
+
+      .hamburger {
+          display: inline-block;
+      }
+
+      .hamburger.open+.routes_containers {
+          left: 0%;
+      }
+
+      .routes_containers {
+          display: none;
+      }
+
+      .routes_containers {
+          position: absolute;
+          top: 60px;
+          background-color: rgb(80, 83, 83);
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          left: -100%;
+          transition: 0.6s ease-in-out;
+      }
+
+      .routes {
+          margin: 20px;
+      }
+
+      .routes a {
+          color: white;
+          font-size: 30px;
+      }
+
+
+      .icons {
+          font-size: 25px;
+      }
+
+      .middle_main_container {
+          margin: 40% 10%;
+      }
+
+      .cards_container {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+      .cards_container {
+          grid-template-columns: repeat(1, 1fr);
+      }
+  }
