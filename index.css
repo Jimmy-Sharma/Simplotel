@@ -56,20 +56,6 @@
       left: 0px;
   }
 
-  .hamburger.open .first {
-      transform: rotate(45deg);
-      top: 13px;
-  }
-
-  .hamburger.open .second {
-      opacity: 0;
-  }
-
-  .hamburger.open .third {
-      transform: rotate(-45deg);
-      top: 13px;
-  }
-
   .routes_containers {
       display: flex;
   }
@@ -252,10 +238,6 @@
 
       .hamburger {
           display: inline-block;
-      }
-
-      .hamburger.open+.routes_containers {
-          left: 0%;
       }
 
       .routes_containers {
